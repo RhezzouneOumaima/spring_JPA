@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>show all products</title>
+</head>
+<body>
+<div th:if="${products.size()!=0}">
+<table border="1">
+<tr><th>ID</th><th>Libelle</th><th>price</th><th>Quantite</th>
+</tr>
+
+<tr th:each="p:${products}">
+<th th:text="${p.idprod}"></th>
+<th th:text="${p.libelle}"></th>
+<th  th:text="${p.prix}"></th>
+<th  th:text="${p.quantite}"></th>
+</tr>
+</table>
+</div>
+</body>
+</html>
